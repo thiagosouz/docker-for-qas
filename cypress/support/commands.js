@@ -5,7 +5,6 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 
 Cypress.Commands.add('audioPlay', () => {
     cy.get('.play').eq(5).click()
-
     cy.get('audio[src="https://raw.githubusercontent.com/qaxperience/mock/main/songs/afight.mp3"]')
         .as('classAudio')
         .should((audioElements) => {
